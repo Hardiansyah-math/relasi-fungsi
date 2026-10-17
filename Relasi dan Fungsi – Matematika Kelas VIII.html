@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Relasi dan Fungsi – Matematika Kelas VIII</title>
+<style>
+:root{--bg:#fff6dc;--card:#fffdf6;--ink:#1d2b64;--mut:#5a6392;--sun:#ffc233;--cor:#ff5d73;--teal:#16a899;--soft:#e8ecff;--ok:#0f9d6b;--bad:#e0334d;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121936;--card:#1b2450;--ink:#f1f3ff;--mut:#a8b1e0;--soft:#27316a;--sun:#ffc233;--ok:#3ddc97;--bad:#ff6b81}}
+:root[data-theme="dark"]{--bg:#121936;--card:#1b2450;--ink:#f1f3ff;--mut:#a8b1e0;--soft:#27316a;--sun:#ffc233;--ok:#3ddc97;--bad:#ff6b81}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 "Trebuchet MS","Segoe UI",system-ui,sans-serif}
+main,header{max-width:860px;margin:0 auto;padding:0 16px}
+h1,h2,h3{line-height:1.2;margin:.4em 0}
+h1{font-size:clamp(1.9rem,6vw,3rem);font-weight:900}
+h2{font-size:1.5rem}h3{font-size:1.15rem}
+.top{padding-top:14px}
+nav{display:flex;gap:8px;overflow-x:auto;padding:10px 0}
+nav button{flex:none}
+button{font:inherit;font-weight:700;color:var(--ink);background:var(--card);border:2.5px solid var(--ink);border-radius:12px;padding:8px 14px;cursor:pointer;box-shadow:3px 3px 0 var(--ink)}
+button:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+button:focus-visible,input:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+button.on,.pri{background:var(--sun);color:#1d2b64}
+button[disabled]{opacity:.55;cursor:default}
+.card{background:var(--card);border:2.5px solid var(--ink);border-radius:18px;padding:16px 18px;margin:14px 0;box-shadow:5px 5px 0 var(--ink)}
+.hero{background:var(--sun);color:#1d2b64;border-color:#1d2b64;box-shadow:6px 6px 0 #1d2b64}
+.hero p{margin:.3em 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.def,.ex,.tip{border-left:7px solid var(--teal);background:var(--soft);padding:10px 14px;border-radius:10px;margin:12px 0}
+.ex{border-color:var(--cor)}.tip{border-color:var(--sun)}
+.chip{display:inline-block;background:var(--soft);border:2px solid var(--ink);border-radius:20px;padding:1px 12px;margin:3px;font-weight:700}
+table{border-collapse:collapse;width:100%;margin:10px 0;font-size:.95rem}
+td,th{border:2px solid var(--ink);padding:5px 8px;text-align:center}th{background:var(--sun);color:#1d2b64}
+.sc{overflow-x:auto}
+.ar{width:100%;max-width:340px;color:var(--cor);display:block;margin:6px auto}
+.ar line{stroke:currentColor;stroke-width:2.2}.ar text{fill:var(--ink);font:700 15px sans-serif}.bx{fill:var(--soft);stroke:var(--ink);stroke-width:2}
+.bar{height:12px;background:var(--soft);border:2px solid var(--ink);border-radius:8px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--teal);width:0;transition:width .3s}
+.opt{display:block;width:100%;text-align:left;margin:9px 0}
+.opt.ok{background:var(--ok);color:#fff}.opt.no{background:var(--bad);color:#fff}.opt.gone{visibility:hidden}
+.fb{margin:8px 0;font-weight:700}
+.nest{border:3px solid var(--ink);border-radius:22px;padding:10px;background:var(--soft);text-align:center;font-weight:700}
+.nest .nest{background:var(--sun);color:#1d2b64}.nest .nest .nest{background:var(--cor);color:#fff}
+input[type=text],input[type=range]{font:inherit}
+input[type=text]{width:130px;padding:6px 10px;border:2.5px solid var(--ink);border-radius:10px;background:var(--card);color:var(--ink)}
+.hud{display:flex;justify-content:space-between;gap:8px;font-weight:800;flex-wrap:wrap}
+.lad{display:flex;gap:4px;flex-wrap:wrap;margin:8px 0}.lad b{font-size:.75rem;padding:1px 7px;border-radius:10px;background:var(--soft);border:2px solid var(--ink)}.lad b.now{background:var(--sun);color:#1d2b64}.lad b.done{background:var(--teal);color:#fff}
+.big{font-size:2.4rem;font-weight:900}
+.sch{margin:0;font-weight:800;color:var(--mut)}
+footer{max-width:860px;margin:28px auto 20px;padding:0 16px}footer .card{text-align:center;margin:0}footer p{margin:2px 0}
+.an{width:100%;max-width:420px;color:var(--cor);display:block;margin:6px auto}.an .ln{stroke:currentColor;stroke-width:2.6;opacity:0;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .9s,opacity .1s}.an .ln.on{opacity:1;stroke-dashoffset:0}.an text{fill:var(--ink);font:800 20px sans-serif;transition:fill .4s,opacity .4s}.an .nd.hi{fill:var(--teal)}.an .nd.bd{fill:var(--bad)}.an .nd.dim{opacity:.3}#mi{transition:transform .9s,opacity .2s .7s}#mo{transition:transform .8s,opacity .4s}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body>
+<header class="top"><p class="sch">🏫 SMP Negeri 1 Terusan Nunyai</p><h1>🧩 Relasi dan Fungsi</h1><nav id="nv"></nav></header>
+<main>
+<section id="home" class="pg"></section>
+<section id="materi" class="pg" hidden></section>
+<section id="anim" class="pg" hidden></section>
+<section id="latihan" class="pg" hidden></section>
+<section id="kuis" class="pg" hidden></section>
+<section id="game" class="pg" hidden></section>
+</main>
+<footer><div class="card"><p><b>SMP Negeri 1 Terusan Nunyai</b></p><p>Media pembelajaran Matematika Kelas VIII, Bab 4: Relasi dan Fungsi</p><p>Penyusun: <b>Hardiansyah, S.Pd</b></p></div></footer>
+<script>
+const $=s=>document.querySelector(s),shuf=a=>[...a].sort(()=>Math.random()-.5);
+const TABS=[['home','🏠 Beranda'],['materi','📖 Materi'],['anim','🎬 Animasi'],['latihan','✏️ Latihan'],['kuis','🧠 Kuis'],['game','🎮 Gameshow']];
+$('#nv').innerHTML=TABS.map(t=>`<button data-t="${t[0]}" onclick="go('${t[0]}')">${t[1]}</button>`).join('');
+function go(id){document.querySelectorAll('.pg').forEach(p=>p.hidden=p.id!==id);document.querySelectorAll('#nv button').forEach(b=>b.classList.toggle('on',b.dataset.t===id));if(id==='home')home();if(id==='kuis'&&!QZ.on)kstart();if(id==='game'&&!G.on)gmenu();scrollTo(0,0)}
+let aid=0;
+function arrows(A,B,P){aid++;const h=Math.max(A.length,B.length)*30+20,y=(i,l)=>h/2+(i-(l-1)/2)*30;
+let s=`<svg class="ar" viewBox="0 0 280 ${h}" role="img" aria-label="Diagram panah"><defs><marker id="m${aid}" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="currentColor"/></marker></defs><rect class="bx" x="14" y="4" width="64" height="${h-8}" rx="22"/><rect class="bx" x="202" y="4" width="64" height="${h-8}" rx="22"/>`;
+P.forEach(([a,b])=>s+=`<line x1="52" y1="${y(A.indexOf(a),A.length)}" x2="226" y2="${y(B.indexOf(b),B.length)}" marker-end="url(#m${aid})"/>`);
+A.forEach((a,i)=>s+=`<text x="34" y="${y(i,A.length)+5}" text-anchor="middle">${a}</text>`);
+B.forEach((b,i)=>s+=`<text x="244" y="${y(i,B.length)+5}" text-anchor="middle">${b}</text>`);
+return s+'</svg>'}
+const SEEN=new Set();
+/* ===== BERANDA ===== */
+const GOALS=['Memahami konsep himpunan, relasi, dan fungsi.','Menjelaskan contoh kegiatan sehari-hari yang berkaitan dengan himpunan, relasi, dan fungsi.','Menyajikan relasi dengan diagram panah, diagram Cartesius, dan himpunan pasangan berurutan.','Menjelaskan ciri-ciri dan cara menyajikan fungsi.','Menghitung nilai fungsi dan menggambar grafik fungsi pada koordinat Cartesius.','Menyajikan hasil penyelesaian masalah yang terkait relasi dan fungsi.'];
+function home(){$('#home').innerHTML=`<div class="card hero"><h2>Kapan suatu relasi dapat menyatakan fungsi?</h2><p>Belajar Bab 4 Matematika Kelas VIII lewat materi bergambar, latihan, kuis, dan gameshow. Mulai dari bagian Materi, ya!</p><button onclick="go('materi')">Mulai belajar</button></div>
+<div class="card"><h2>🎯 Tujuan pembelajaran</h2><p>Setelah menyelesaikan bab ini, kamu mampu:</p>${GOALS.map((g,i)=>`<label style="display:block;margin:6px 0"><input type="checkbox"> ${g}</label>`).join('')}</div>
+<div class="card"><h2>🤔 Pertanyaan pemantik</h2><p>Siswa duduk di kursi tertentu, tetapi satu kursi panjang bisa memuat banyak siswa. Apakah hubungan siswa dan kursi itu relasi atau fungsi? Simpan jawabanmu, lalu cek lagi setelah belajar.</p><p><span class="chip">himpunan</span><span class="chip">relasi</span><span class="chip">fungsi</span><span class="chip">domain</span><span class="chip">kodomain</span><span class="chip">range</span><span class="chip">korespondensi satu-satu</span></p></div>
+<div class="card"><h2>📈 Progres materi</h2><div class="bar"><i style="width:${SEEN.size*20}%"></i></div><p>${SEEN.size} dari 5 bagian sudah dibuka.</p></div>
+<div class="grid"><button onclick="go('anim')">🎬 Animasi materi</button><button onclick="go('latihan')">✏️ Latihan isian</button><button onclick="go('kuis')">🧠 Kuis pilihan ganda</button><button class="pri" onclick="go('game')">🎮 Main gameshow</button></div>`}
+/* ===== MATERI ===== */
+const M=[
+{t:'1. Himpunan',b:()=>`<div class="def"><b>Himpunan</b> adalah kumpulan objek tertentu yang dapat diidentifikasi dengan jelas. Banyak anggotanya disebut <b>kardinalitas</b>, ditulis n(A).</div>
+<p>Contoh: anak-anak Bani Madhuri membentuk himpunan A = {Sulastri, M. Idris, A. Halim, M. Tohir}, sehingga n(A) = 4.</p>
+<h3>Tiga cara menyajikan himpunan</h3>
+<div class="sc"><table><tr><th>Cara</th><th>Artinya</th><th>Contoh</th></tr><tr><td>Deskripsi</td><td>dengan kata-kata</td><td>A = {bilangan asli kurang dari 5}</td></tr><tr><td>Enumerasi</td><td>menyebut anggotanya</td><td>A = {1, 2, 3, 4}</td></tr><tr><td>Notasi pembentuk</td><td>syarat untuk x</td><td>A = {x | x &lt; 5, x bilangan asli}</td></tr></table></div>
+<div class="ex"><b>Berhingga atau tak berhingga?</b><br>G = {2, 4, 6, …, 20} berhingga (10 anggota). H = {…, −2, −1, 0, 1, 2, …} tak berhingga, jadi lebih tepat ditulis dengan notasi pembentuk himpunan.</div>`},
+{t:'2. Relasi',b:()=>`<p>Andino, Natalia, Taufiq, Panggabean, dan Nyoman memesan makanan di restoran ABC. Tiap anak punya pasangan makanan pesanannya. Itulah <b>relasi</b>.</p>
+<div class="def"><b>Relasi</b> dari himpunan A ke himpunan B adalah hubungan yang memasangkan anggota A dengan anggota B.<br>• <b>Domain</b> (daerah asal) = himpunan A<br>• <b>Kodomain</b> (daerah kawan) = himpunan B<br>• <b>Range</b> (daerah hasil) = anggota B yang mendapat pasangan</div>
+<h3>Contoh: A = {2, 3, 5}, B = {1, 4, 5, 6}, relasi “kurang dari”</h3>
+${arrows([2,3,5],[1,4,5,6],[[2,4],[2,5],[2,6],[3,4],[3,5],[3,6],[5,6]])}
+<p>Domain = {2, 3, 5}, Kodomain = {1, 4, 5, 6}, <b>Range = {4, 5, 6}</b> (angka 1 tidak punya pasangan).</p>
+<h3>Tiga cara menyajikan relasi</h3>
+<div class="grid"><div class="tip"><b>Diagram panah</b><br>anak panah dari A ke B</div><div class="tip"><b>Diagram Cartesius</b><br>anggota A di sumbu x, anggota B di sumbu y, pasangan jadi titik</div><div class="tip"><b>Pasangan berurutan</b><br>{(2, 4), (2, 5), (2, 6), (3, 4), (3, 5), (3, 6), (5, 6)}</div></div>`},
+{t:'3. Fungsi',b:()=>`<div class="def"><b>Fungsi</b> adalah relasi khusus yang menghubungkan setiap anggota domain dengan <b>tepat satu</b> anggota kodomain.</div>
+<p>Dua pertanyaan pengecek: (1) apakah <b>semua</b> anggota domain punya pasangan? (2) apakah tiap anggota domain punya <b>hanya satu</b> pasangan? Jika keduanya “ya”, relasi itu fungsi.</p>
+<div class="card"><h3>🔬 Coba sendiri</h3><p>Ketuk tombol untuk membuat pasangan dari P = {1, 2, 3} ke Q = {a, b, c}.</p><div id="mp"></div></div>
+<div class="ex"><b>Contoh kasus.</b> Telur ke krat telur adalah fungsi, karena tiap telur berada di satu lubang. Krat ke telur bukan fungsi, karena satu wadah bisa memuat banyak telur.</div>
+<h3>Banyak fungsi yang mungkin</h3>
+<p>Jika domain punya m anggota dan kodomain punya n anggota, banyak fungsinya adalah <b>nᵐ</b>.</p>
+<div class="sc"><table><tr><th>Fungsi</th><th>m</th><th>n</th><th>Banyak fungsi</th></tr><tr><td>A → B</td><td>1</td><td>2</td><td>2¹ = 2</td></tr><tr><td>B → C</td><td>2</td><td>3</td><td>3² = 9</td></tr><tr><td>C → A</td><td>3</td><td>1</td><td>1³ = 1</td></tr><tr><td>C → B</td><td>3</td><td>2</td><td>2³ = 8</td></tr></table></div>`},
+{t:'4. Menyajikan dan menghitung fungsi',b:()=>`<p>Fungsi f(x) = 2x dari P = {1, 2, 3, 4, 5} dapat disajikan dengan <b>lima cara</b>:</p>
+<div class="grid"><div class="tip"><b>1. Diagram panah</b>${arrows([1,2,3],[2,4,6],[[1,2],[2,4],[3,6]])}</div><div class="tip"><b>2. Pasangan berurutan</b><br>{(1, 2), (2, 4), (3, 6), (4, 8), (5, 10)}<br><b>3. Persamaan</b><br>f(x) = 2x</div></div>
+<div class="sc"><table><tr><th>4. Tabel x</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr><tr><th>f(x)</th><td>2</td><td>4</td><td>6</td><td>8</td><td>10</td></tr></table></div>
+<p><b>5. Grafik:</b> titik-titik (1, 2), (2, 4), (3, 6), … terletak pada satu garis lurus di koordinat Cartesius.</p>
+<h3>Nilai fungsi</h3>
+<div class="def">Untuk menghitung nilai fungsi, <b>substitusikan</b> nilai x ke rumus fungsinya.</div>
+<div class="ex">f(x) = 4x − 3<br>f(−2) = 4(−2) − 3 = −11<br>f(3) = 4(3) − 3 = 9</div>
+<h3>Menemukan rumus fungsi linear f(x) = ax + b</h3>
+<div class="ex">Diketahui f(−1) = −4 dan f(2) = 5.<br>−a + b = −4 … (1)<br>2a + b = 5 … (2)<br>Kurangkan (2) − (1): 3a = 9, sehingga a = 3. Dari (2): 6 + b = 5, sehingga b = −1.<br><b>f(x) = 3x − 1</b></div>
+<div class="card"><h3>🚕 Tarif taksi: B(x) = 7.500 + 3.000x</h3><p>Geser jarak tempuh: <input type="range" id="tx" min="0" max="60" value="20" oninput="tax()"> <b id="tl"></b></p><p class="big" id="tv"></p></div>`},
+{t:'5. Korespondensi satu-satu',b:()=>`<div class="def"><b>Korespondensi satu-satu</b> adalah fungsi khusus: setiap anggota domain berpasangan dengan tepat satu anggota kodomain, dan sebaliknya. Contoh: setiap siswa punya satu nomor induk yang tidak dimiliki siswa lain.</div>
+${arrows(['Ahmad','Tohir','Wati'].map((s,i)=>i+1),['a','b','c'],[[1,'b'],[2,'a'],[3,'c']])}
+<p>Syarat perlu: banyak anggota kedua himpunan <b>sama</b>, n(A) = n(B). Jika n(A) ≠ n(B), pasti bukan korespondensi satu-satu.</p>
+<h3>Banyak korespondensi satu-satu</h3>
+<p>Jika n(A) = n(B) = n, banyaknya adalah <b>n! = n × (n − 1) × … × 2 × 1</b>.</p>
+<div class="sc"><table><tr><th>n</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><th>n!</th><td>1</td><td>2</td><td>6</td><td>24</td><td>120</td><td>720</td></tr></table></div>
+<h3>Hubungan ketiganya</h3>
+<div class="nest">Relasi<div class="nest">Fungsi<div class="nest">Korespondensi satu-satu</div></div></div>
+<p>Setiap korespondensi satu-satu pasti fungsi, dan setiap fungsi pasti relasi. Kebalikannya belum tentu benar.</p>`}];
+let mi=0;
+function materi(){SEEN.add(mi);const m=M[mi];$('#materi').innerHTML=`<div class="bar"><i style="width:${(mi+1)*20}%"></i></div><div style="margin:10px 0">${M.map((x,i)=>`<button class="${i===mi?'on':''}" onclick="mi=${i};materi()" style="margin:3px">${i+1}</button>`).join('')}</div><div class="card"><h2>${m.t}</h2>${m.b()}</div><div style="display:flex;justify-content:space-between"><button ${mi?'':'disabled'} onclick="mi--;materi()">← Sebelumnya</button>${mi<4?'<button class="pri" onclick="mi++;materi()">Berikutnya →</button>':'<button class="pri" onclick="go(\'latihan\')">Ke latihan ✏️</button>'}</div>`;
+if(mi===2)mapper();if(mi===3)tax();scrollTo(0,0)}
+TABS[1][2]=0;
+const _go=go;go=function(id){_go(id);if(id==='materi')materi();if(id==='latihan')latih();if(id==='anim')aui()};
+/* widget pemetaan */
+const SEL={1:[],2:[],3:[]};
+function tg(p,q){const a=SEL[p],i=a.indexOf(q);i<0?a.push(q):a.splice(i,1);mapper()}
+function mapper(){const Q=['a','b','c'],P=[];for(const p in SEL)SEL[p].forEach(q=>P.push([+p,q]));
+let v,c='bad';const no=[1,2,3].filter(p=>!SEL[p].length),mu=[1,2,3].filter(p=>SEL[p].length>1);
+if(no.length)v=`Bukan fungsi: anggota ${no.join(', ')} belum punya pasangan.`;else if(mu.length)v=`Bukan fungsi: anggota ${mu.join(', ')} punya lebih dari satu pasangan.`;else{v='Fungsi! Setiap anggota P punya tepat satu pasangan. (Ada 3³ = 27 fungsi yang mungkin.)';c='ok'}
+$('#mp').innerHTML=[1,2,3].map(p=>`<div>${p} → ${Q.map(q=>`<button class="${SEL[p].includes(q)?'on':''}" onclick="tg(${p},'${q}')" style="padding:3px 12px;margin:2px">${q}</button>`).join('')}</div>`).join('')+arrows([1,2,3],Q,P)+`<p class="fb" style="color:var(--${c})">${v}</p>`}
+function tax(){const x=+$('#tx').value;$('#tl').textContent=x+' km';$('#tv').textContent='Rp'+(7500+3000*x).toLocaleString('id-ID')}
+/* ===== BANK SOAL ===== */
+const Q=[
+['Jika n(A) = 3 dan n(B) = 2, banyak fungsi dari A ke B adalah …',['5','6','8','9'],2,'Banyak fungsi = n(B)^n(A) = 2³ = 8.'],
+['Relasi “satu lebihnya dari” dari P = {3, 4, 5} ke Q = {1, 2, 3, 4}. Range-nya adalah …',['{3, 4, 5}','{2, 3, 4}','{1, 2, 3, 4}','{3, 4}'],1,'Pasangannya (3, 2), (4, 3), (5, 4). Anggota Q yang mendapat pasangan: 2, 3, 4.'],
+['Syarat relasi disebut fungsi adalah …',['setiap anggota kodomain punya pasangan','setiap anggota domain punya tepat satu pasangan','banyak anggota domain dan kodomain sama','ada anggota domain yang berpasangan dua kali'],1,'Fungsi: setiap anggota domain berpasangan dengan tepat satu anggota kodomain.'],
+['Domain = {1, 2, 3}. Manakah yang merupakan fungsi ke {a, b}?',['{(1, a), (1, b), (2, b)}','{(1, a), (2, a), (3, b)}','{(1, a), (2, b)}','{(1, a), (2, a), (2, b), (3, b)}'],1,'Hanya pilihan ini yang membuat 1, 2, 3 masing-masing punya tepat satu pasangan.'],
+['Jika f(x) = 4x − 3, maka f(−2) = …',['−11','−5','5','11'],0,'f(−2) = 4(−2) − 3 = −8 − 3 = −11.'],
+['Fungsi linear f memenuhi f(−1) = −4 dan f(2) = 5. Rumus fungsinya adalah …',['f(x) = 2x − 2','f(x) = 3x − 1','f(x) = 3x + 1','f(x) = x − 3'],1,'Selisih nilai 9 untuk selisih x 3, jadi a = 3. Lalu 3(2) + b = 5 sehingga b = −1.'],
+['Tarif taksi B(x) = 7.500 + 3.000x. Tarif untuk 20 km adalah …',['Rp60.000','Rp67.500','Rp75.000','Rp97.500'],1,'7.500 + 20 × 3.000 = 7.500 + 60.000 = 67.500.'],
+['Banyak korespondensi satu-satu antara dua himpunan beranggota 4 adalah …',['8','16','24','64'],2,'4! = 4 × 3 × 2 × 1 = 24.'],
+['Himpunan dengan 3 anggota dan himpunan dengan 5 anggota …',['bisa korespondensi satu-satu','pasti korespondensi satu-satu','tidak mungkin korespondensi satu-satu','pasti himpunan kosong'],2,'Korespondensi satu-satu mensyaratkan banyak anggota kedua himpunan sama.'],
+['Himpunan C = {bilangan cacah kurang dari 5} jika ditulis dengan enumerasi adalah …',['{1, 2, 3, 4}','{0, 1, 2, 3, 4}','{0, 1, 2, 3, 4, 5}','{1, 2, 3, 4, 5}'],1,'Bilangan cacah dimulai dari 0, jadi C = {0, 1, 2, 3, 4}.'],
+['Berikut ini yang BUKAN cara menyajikan fungsi adalah …',['tabel','grafik','diagram lingkaran','diagram panah'],2,'Lima cara: diagram panah, pasangan berurutan, persamaan fungsi, tabel, dan grafik.'],
+['Jika f(x) = 5 − 3x, maka f(2) = …',['−1','1','11','−11'],0,'f(2) = 5 − 3(2) = 5 − 6 = −1.']];
+const prep=q=>{const o=q[1].map((t,i)=>[t,i===q[2]]);const s=shuf(o);return{q:q[0],o:s.map(x=>x[0]),a:s.findIndex(x=>x[1]),e:q[3]}};
+/* ===== LATIHAN ===== */
+const L=[['Banyak fungsi dari A (2 anggota) ke B (3 anggota) adalah …',9,'Gunakan n(B)^n(A) = 3².'],['Jika f(x) = 2x + 5, maka f(4) = …',13,'Substitusi x = 4: 2(4) + 5.'],['Banyak korespondensi satu-satu antara dua himpunan beranggota 5 adalah …',120,'5! = 5 × 4 × 3 × 2 × 1.'],['Diketahui f(x) = 3x − 1. Jika f(x) = 14, maka x = …',5,'3x − 1 = 14, sehingga 3x = 15.'],['Tarif taksi B(x) = 7.500 + 3.000x. Tarif 36 km adalah Rp …',115500,'7.500 + 36 × 3.000.'],['Uang Rp154.500 cukup untuk menempuh … km (tarif taksi yang sama).',49,'(154.500 − 7.500) ÷ 3.000.'],['Jika f(x) = 5 − 3x, maka f(−2) = …',11,'5 − 3(−2) = 5 + 6.']];
+const LD={};
+function latih(){$('#latihan').innerHTML=`<div class="card hero"><h2>✏️ Latihan isian</h2><p>Jawab dengan angka saja. Pakai petunjuk bila macet.</p></div>`+L.map((l,i)=>`<div class="card"><b>${i+1}.</b> ${l[0]}<br><input type="text" id="li${i}" inputmode="numeric" aria-label="Jawaban ${i+1}"> <button onclick="cek(${i})">Cek</button> <button onclick="$('#lh${i}').hidden=false">Petunjuk</button><p id="lh${i}" hidden class="tip">${l[2]}</p><p class="fb" id="lf${i}"></p></div>`).join('')+`<div class="card"><b id="ls">Benar 0 dari ${L.length}</b></div>`;for(const k in LD)cek(+k,1)}
+function cek(i,q){const r=$('#li'+i).value.replace(/−/g,'-').replace(/[^\d-]/g,'');if(r==='')return;const ok=+r===L[i][1];LD[i]=ok;$('#lf'+i).innerHTML=ok?'✅ Benar!':'❌ Belum tepat, coba lagi.';$('#lf'+i).style.color=`var(--${ok?'ok':'bad'})`;$('#ls').textContent=`Benar ${Object.values(LD).filter(Boolean).length} dari ${L.length}`}
+/* ===== KUIS ===== */
+const QZ={on:0};
+function kstart(){Object.assign(QZ,{on:1,qs:shuf(Q).slice(0,8).map(prep),i:0,s:0});kq()}
+function kq(){const q=QZ.qs[QZ.i];if(!q){const p=Math.round(QZ.s/8*100);QZ.on=0;$('#kuis').innerHTML=`<div class="card hero"><h2>Skor akhir</h2><p class="big">${p}</p><p>${QZ.s} dari 8 benar. ${p>=80?'Hebat, kamu siap main gameshow! 🏆':p>=50?'Bagus, ulangi materi yang masih ragu. 👍':'Baca ulang materi dulu, lalu coba lagi. 📖'}</p><button onclick="kstart()">Ulangi kuis</button> <button onclick="go('game')">Ke gameshow 🎮</button></div>`;return}
+$('#kuis').innerHTML=`<div class="bar"><i style="width:${QZ.i/8*100}%"></i></div><div class="card"><b>Soal ${QZ.i+1} dari 8</b><p>${q.q}</p>${q.o.map((o,k)=>`<button class="opt" onclick="kans(${k})">${'ABCD'[k]}. ${o}</button>`).join('')}<div id="kx"></div></div>`}
+function kans(k){const q=QZ.qs[QZ.i];if(QZ.d)return;QZ.d=1;const b=document.querySelectorAll('#kuis .opt');b[q.a].classList.add('ok');if(k!==q.a)b[k].classList.add('no');else QZ.s++;$('#kx').innerHTML=`<p class="fb">${k===q.a?'✅ Benar!':'❌ Kurang tepat.'} ${q.e}</p><button class="pri" onclick="QZ.i++;QZ.d=0;kq()">Lanjut →</button>`}
+/* ===== GAMESHOW ===== */
+const LAD=[100,200,300,500,750,1000,1500,2000,3000,5000],G={on:0};
+function best(){try{return +localStorage.getItem('rf-best')||0}catch(e){return 0}}
+function gmenu(){$('#game').innerHTML=`<div class="card hero"><h2>🎮 Cerdas Cermat Relasi dan Fungsi</h2><p>10 pertanyaan, waktu 20 detik tiap soal, 3 nyawa. Jawab cepat untuk bonus poin. Tersedia bantuan 50:50 dan Lewati, masing-masing sekali.</p><p>Skor terbaikmu: <b>${best()}</b></p><button onclick="gstart()">Mulai permainan</button></div>`}
+function gstart(){Object.assign(G,{on:1,qs:shuf(Q).slice(0,10).map(prep),i:0,l:3,p:0,h:1,s:1});gq()}
+function gq(){clearInterval(G.tm);if(G.i>=10||G.l<=0)return gend();G.t=20;G.d=0;const q=G.qs[G.i];
+$('#game').innerHTML=`<div class="card"><div class="hud"><span id="gl">${'❤️'.repeat(G.l)}</span><span>Poin: <span id="gp">${G.p}</span></span><span id="gt">⏱ 20</span></div><div class="bar"><i id="gb" style="width:100%;background:var(--cor)"></i></div><div class="lad">${LAD.map((v,i)=>`<b class="${i===G.i?'now':i<G.i?'done':''}">${v}</b>`).join('')}</div><p><b>Soal ${G.i+1}.</b> ${q.q}</p>${q.o.map((o,k)=>`<button class="opt" onclick="gans(${k})">${'ABCD'[k]}. ${o}</button>`).join('')}<div id="gx"></div><p><button ${G.h?'':'disabled'} onclick="g50()">50:50</button> <button ${G.s?'':'disabled'} onclick="gskip()">Lewati</button></p></div>`;
+G.tm=setInterval(()=>{G.t--;$('#gt').textContent='⏱ '+G.t;$('#gb').style.width=G.t*5+'%';if(G.t<=0)gans(-1)},1000)}
+function g50(){if(!G.h||G.d)return;G.h=0;const q=G.qs[G.i],b=document.querySelectorAll('#game .opt');shuf([0,1,2,3].filter(k=>k!==q.a)).slice(0,2).forEach(k=>b[k].classList.add('gone'));gq2()}
+function gq2(){document.querySelectorAll('#game p>button').forEach(b=>b.disabled=true)}
+function gskip(){if(!G.s||G.d)return;G.s=0;G.i++;gq()}
+function gans(k){if(G.d)return;G.d=1;clearInterval(G.tm);const q=G.qs[G.i],ok=k===q.a,b=document.querySelectorAll('#game .opt');b[q.a].classList.add('ok');if(!ok&&k>=0)b[k].classList.add('no');if(ok)G.p+=LAD[G.i]+G.t*10;else G.l--;
+$('#gp').textContent=G.p;$('#gl').textContent='❤️'.repeat(G.l);gq2();$('#gx').innerHTML=`<p class="fb">${ok?'✅ Benar! +'+(LAD[G.i]+G.t*10):k<0?'⏰ Waktu habis.':'❌ Salah, nyawa berkurang.'} ${q.e}</p><button class="pri" onclick="G.i++;gq()">Lanjut →</button>`}
+function gend(){G.on=0;const p=G.p,r=p<2000?'Pemula 🌱':p<6000?'Jagoan Fungsi 🥉':p<12000?'Master Relasi 🥈':'Sultan Matematika 👑',nb=p>best();try{if(nb)localStorage.setItem('rf-best',p)}catch(e){}
+$('#game').innerHTML=`<div class="card hero"><h2>${G.l>0?'Permainan selesai!':'Nyawa habis!'}</h2><p class="big">${p}</p><p>Gelarmu: <b>${r}</b>${nb?'<br>🎉 Skor terbaik baru!':''}</p><button onclick="gstart()">Main lagi</button> <button onclick="go('materi')">Baca materi</button></div>`}
+/* ===== ANIMASI ===== */
+const PM=[['a','b','c'],['a','c','b'],['b','a','c'],['b','c','a'],['c','a','b'],['c','b','a']];
+const AN=[
+{n:'Relasi',A:[2,3,5],B:[1,4,5,6],acc:1,steps:[{c:'Ada dua himpunan: A sebagai daerah asal (domain) dan B sebagai daerah kawan (kodomain).',p:[]},{c:'Relasi “kurang dari”: 2 lebih kecil dari 4, 5, dan 6.',p:[[2,4],[2,5],[2,6]]},{c:'3 juga lebih kecil dari 4, 5, dan 6.',p:[[3,4],[3,5],[3,6]]},{c:'5 hanya lebih kecil dari 6.',p:[[5,6]]},{c:'Range adalah anggota B yang mendapat pasangan, yaitu {4, 5, 6}. Angka 1 tidak.',p:[],hi:[4,5,6]}]},
+{n:'Fungsi',A:[1,2,3],B:['a','b','c'],acc:1,steps:[{c:'Relasi dari P = {1, 2, 3} ke Q = {a, b, c}. Kita cek apakah ini fungsi.',p:[]},{c:'Anggota 1 berpasangan dengan a.',p:[[1,'a']]},{c:'Anggota 2 berpasangan dengan b.',p:[[2,'b']]},{c:'Anggota 3 juga berpasangan dengan b. Boleh, yang dilarang hanyalah satu anggota P punya dua pasangan.',p:[[3,'b']]},{c:'Setiap anggota P punya tepat satu pasangan, jadi ini fungsi ✅',p:[]}]},
+{n:'Bukan fungsi 1',A:[1,2,3],B:['a','b','c'],acc:1,steps:[{c:'Kita cek relasi lain dari P ke Q.',p:[]},{c:'Anggota 1 berpasangan dengan a.',p:[[1,'a']]},{c:'Anggota 1 juga berpasangan dengan b. Satu anggota punya dua pasangan, melanggar syarat “tepat satu”.',p:[[1,'b']],bad:[1]},{c:'Anggota 2 dan 3 aman, tetapi karena anggota 1 bermasalah, relasi ini bukan fungsi ❌',p:[[2,'c'],[3,'c']]}]},
+{n:'Bukan fungsi 2',A:[1,2,3],B:['a','b','c'],acc:1,steps:[{c:'Kita cek relasi lain dari P ke Q.',p:[]},{c:'Anggota 1 berpasangan dengan a.',p:[[1,'a']]},{c:'Anggota 2 berpasangan dengan b.',p:[[2,'b']]},{c:'Anggota 3 tidak punya pasangan sama sekali. Semua anggota domain wajib berpasangan, jadi ini bukan fungsi ❌',p:[],bad:[3]}]},
+{n:'Satu-satu',A:[1,2,3],B:['a','b','c'],acc:0,steps:[{c:'Korespondensi satu-satu: setiap anggota A berpasangan dengan tepat satu anggota B, dan sebaliknya. Lihat semua susunannya.',p:[]},...PM.map((m,k)=>({c:k<5?'Susunan ke-'+(k+1)+'.':'Susunan ke-6, yang terakhir. Totalnya 3! = 3 × 2 × 1 = 6 susunan.',p:m.map((x,i)=>[i+1,x])}))]},
+{n:'Mesin fungsi',m:1}];
+function S(v){return v<0?'−'+(-v):''+v}
+let ai=0,ak=0,at,MP=[];
+function asvg(s){const h=Math.max(s.A.length,s.B.length)*44+24,y=(i,l)=>h/2+(i-(l-1)/2)*44;let o=`<svg class='an' viewBox='0 0 320 ${h}' role='img' aria-label='Animasi diagram panah'><defs><marker id='am' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0 0L8 4L0 8z' fill='currentColor'/></marker></defs><rect class='bx' x='10' y='4' width='70' height='${h-8}' rx='26'/><rect class='bx' x='240' y='4' width='70' height='${h-8}' rx='26'/>`;
+s.steps.forEach((st,k)=>st.p.forEach(([a,b])=>{o+=`<line class='ln' pathLength='1' data-s='${k}' data-e='${s.acc?99:k}' x1='60' y1='${y(s.A.indexOf(a),s.A.length)}' x2='258' y2='${y(s.B.indexOf(b),s.B.length)}' marker-end='url(#am)'/>`}));
+s.A.forEach((a,i)=>o+=`<text class='nd' data-k='A${a}' x='38' y='${y(i,s.A.length)+7}' text-anchor='middle'>${a}</text>`);s.B.forEach((b,i)=>o+=`<text class='nd' data-k='B${b}' x='275' y='${y(i,s.B.length)+7}' text-anchor='middle'>${b}</text>`);return o+'</svg>'}
+function aui(){clearTimeout(at);const s=AN[ai];let b=`<div class='card hero'><h2>🎬 Materi dalam animasi</h2><p>Pilih topik, lalu ketuk langkah berikutnya atau putar otomatis.</p></div><div>${AN.map((x,i)=>`<button class='${i===ai?'on':''}' style='margin:3px' onclick='ai=${i};ak=0;MP=[];aui()'>${x.n}</button>`).join('')}</div>`;
+if(s.m)b+=`<div class='card'><p>Fungsi f(x) = 2x + 1 bekerja seperti mesin: masukkan x, keluar tepat satu hasil. Pilih angka masukan:</p><svg class='an' viewBox='0 0 360 150' role='img' aria-label='Mesin fungsi'><rect class='bx' x='130' y='30' width='100' height='90' rx='16'/><text x='180' y='80' text-anchor='middle' style='font-size:15px'>f(x) = 2x + 1</text><g id='mi'><circle cx='40' cy='75' r='24' style='fill:var(--sun)'/><text id='mit' x='40' y='82' text-anchor='middle' style='fill:#1d2b64'>?</text></g><g id='mo' style='opacity:0;transform:translateX(-70px)'><circle cx='320' cy='75' r='24' style='fill:var(--cor)'/><text id='mot' x='320' y='82' text-anchor='middle' style='fill:#fff'>?</text></g></svg><div>${[-2,-1,0,1,2,3,4,5].map(x=>`<button style='margin:3px' onclick='amach(${x})'>${S(x)}</button>`).join('')}</div><p class='fb' id='acap'>Ketuk sebuah angka.</p><p id='amp'></p></div>`;
+else b+=`<div class='card'><div class='hud'><span>Daerah asal</span><span>Daerah kawan</span></div>${asvg(s)}<p class='fb' id='acap'></p><div class='bar'><i id='apr'></i></div><p><button onclick='anext()'>Langkah berikutnya</button> <button class='pri' onclick='aplay()'>▶ Putar otomatis</button> <button onclick='ak=0;aset()'>↺ Ulang</button></p></div>`;
+$('#anim').innerHTML=b;if(!s.m)aset()}
+function aset(){clearTimeout(at);const s=AN[ai],st=s.steps[ak],bad=s.steps.slice(0,ak+1).flatMap(x=>x.bad||[]).map(String),hi=(st.hi||[]).map(String);document.querySelectorAll('#anim .ln').forEach(l=>l.classList.toggle('on',+l.dataset.s<=ak&&ak<=+l.dataset.e));document.querySelectorAll('#anim .nd').forEach(t=>{const k=t.dataset.k,v=k.slice(1),isB=k[0]==='B';t.classList.toggle('hi',isB&&hi.includes(v));t.classList.toggle('dim',isB&&hi.length>0&&!hi.includes(v));t.classList.toggle('bd',!isB&&bad.includes(v))});$('#acap').textContent=st.c;$('#apr').style.width=(ak+1)/s.steps.length*100+'%'}
+function anext(){if(ak<AN[ai].steps.length-1){ak++;aset()}}
+function aplay(){ak=0;aset();(function l(){if(ak<AN[ai].steps.length-1)at=setTimeout(()=>{ak++;aset();l()},2400)})()}
+function amach(x){clearTimeout(at);const i=$('#mi'),o=$('#mo');[i,o].forEach(e=>e.style.transition='none');i.style.opacity=1;i.style.transform='none';o.style.opacity=0;o.style.transform='translateX(-70px)';$('#mit').textContent=S(x);void i.getBoundingClientRect();[i,o].forEach(e=>e.style.transition='');i.style.transform='translateX(140px)';i.style.opacity=0;const y=2*x+1;$('#acap').textContent='Masukan '+S(x)+' diproses mesin…';at=setTimeout(()=>{$('#mot').textContent=S(y);o.style.opacity=1;o.style.transform='none';$('#acap').textContent='f('+S(x)+') = 2('+S(x)+') + 1 = '+S(y);if(!MP.some(p=>p[0]===x))MP.push([x,y]);$('#amp').textContent='Pasangan berurutan: {'+MP.map(p=>'('+S(p[0])+', '+S(p[1])+')').join(', ')+'}. Setiap masukan hanya punya satu keluaran.'},1000)}
+go('home');
+</script></body></html>
